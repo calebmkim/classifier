@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type= "text/css" href = "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body class = "body_style">
+	<header>
+		<div>
+		<h1 class = "home_item">Drowned in Sound (DiS) Forum Classifier</h1>
+		</div>
+	</header>
+
+	<div class="ml-container">
+		Put in the info on the post you are looking at, or thinking of making,
+		and we will predict which category your post fits into! 
+
+		<form action="{{ url_for('predict')}}" method="POST">
+
+		<p>Enter the title of your post here:</p>
+		<textarea class = 'text_area' name="post_title" rows="2" cols="50"></textarea>
+		
+		<p>Enter the body/content of your post here:</p>
+		<textarea class = 'text_area' name="post_body" rows="4" cols="50"></textarea>
+		
+		<br/><br/>
+
+		<input type="submit" class="btn-info" value="Predict Category">
+		
+		</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+    <link rel="stylesheet" type= "text/css" href = "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body class="body_style">
+
+	<header>
+		<div class="results_top">
+		<h1>Prediction</h1>
+	    </div>
+	</header>
+	<div class = 'results-container'>
+        <div> 
+            {{result}}
+        </div>
+	</div>
+</body>
+</html>
