@@ -2,10 +2,6 @@
 from simpletransformers.classification import ClassificationModel
 from bs4 import BeautifulSoup
 
-
-from sentence_transformers import SentenceTransformer
-from joblib import dump, load
-
 class_list = ['The Classifieds', 'Entertainment!', 'How to DiS',
        'Music', 'News & Politics', 'Site Feedback', 'Social', 'Sports']
 
@@ -14,11 +10,11 @@ def clean_text(text):
         text: a string
         return: modified initial string
     """
-    text = BeautifulSoup(text, "lxml").text # HTML decoding
-    text = text.lower() # lowercase text
+    #text = BeautifulSoup(text, "lxml").text # HTML decoding
+    #text = text.lower() # lowercase text
     #text = ' '.join(word for word in text.split() if word not in stop_words)
     #text = REPLACE_BY_SPACE_RE.sub(' ', text) # replace REPLACE_BY_SPACE_RE symbols by space in text
-    return text
+    return text.lower()
 
 
 # define hyperparameter
